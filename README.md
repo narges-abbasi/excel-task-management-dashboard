@@ -42,7 +42,27 @@ Common issues include:
 This project addresses these issues by combining **structured Excel data, formulas, validation rules, summary calculations, KPIs, and visual reporting** into one workbook.
 
 ---
+## 📊 Dataset
 
+The dataset contains **105 tasks** from **10 July 2026 to 30 November 2026**, covering typical business activities such as financial reporting, market research, recruitment and marketing campaigns.
+
+| Column | Description | Type |
+|---|---|---|
+| `Task ID` | Unique task identifier (T001 to T105) | Text |
+| `Task Name` | Short description of the task | Text |
+| `Team` | Finance, Strategy, HR or Marketing | Dropdown |
+| `Task Owner` | Person responsible for the task (11 owners) | Dropdown |
+| `Start Date` | Planned start date | Date |
+| `Due Date` | Deadline | Date |
+| `Task Duration` | Days between start and due date | Calculated |
+| `Status` | Not Started, In Progress or Completed | Dropdown |
+| `Overdue?` | `TRUE` if the task is not completed and past its due date | Calculated |
+| `Comments` | Free-text progress notes | Text |
+
+> **Note:** The data is sample data created for demonstration purposes.
+
+
+---
 ## 🏗️ Workbook Architecture
 
 The workbook is organized into two main layers:
