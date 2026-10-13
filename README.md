@@ -1,6 +1,7 @@
 # 📊 Excel Task Management Dashboard
 
 > An interactive Excel-based task management tracker designed to organize tasks, enforce consistent data entry, automatically calculate task metrics, and provide a clear management dashboard for monitoring progress and overdue work.
+> 
 ![Dashboard preview](images/dashboard.png)
 
 ---
