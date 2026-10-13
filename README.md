@@ -242,37 +242,24 @@ The dashboard provides a high-level view of task progress through key indicators
 | **Total** | Total number of tracked tasks |
 | **Overdue Tasks** | Number of incomplete tasks past their due date |
 
-The expanded sample dataset contains **105 tasks (T001–T105)**. In the uploaded workbook, the task statuses are distributed as follows:
+## 💡 Key Insights
 
-| Status | Tasks |
-|---|---:|
-| Completed | 42 |
-| In Progress | 40 |
-| Not Started | 23 |
-| **Total** | **105** |
+Based on the sample data as of 13 October 2026:
 
-As of **October 10, 2026**, the dataset contains **13 overdue tasks** under the workbook's rule (not completed and due date earlier than today). This count changes automatically over time because the overdue formula uses `TODAY()`.
+| Metric | Value |
+|---|---|
+| Total tasks | 105 |
+| Completed | 42 (40%) |
+| In Progress | 40 (38%) |
+| Not Started | 23 (22%) |
+| Overdue tasks | 21 (20% of all tasks) |
+| Average planned duration | about 29 days |
 
----
-
-### Current Sample Dataset
-
-The expanded workbook contains 105 task records. The task distribution by team and owner is:
-
-| Team | Tasks |
-|---|---:|
-| Strategy | 32 |
-| Finance | 27 |
-| HR | 25 |
-| Marketing | 21 |
-
-| Task Owner | Tasks |
-|---|---:|
-| Sarah Johnson | 25 |
-| David Kim | 21 |
-| Emily Davis | 21 |
-| Alex Chen | 20 |
-| James Miller | 18 |
+- **Overdue risk:** All 21 overdue tasks are either In Progress (16) or Not Started (5). By team, Finance and Strategy have 6 each, HR has 5 and Marketing has 4.
+- **Workload:** Max Fredd owns the most tasks (13) and Emily Davis the fewest (7), against an average of about 9.5 tasks per owner.
+- **Owners to watch:** Anna David and Max Fredd each hold 4 overdue tasks. Anna David also has 6 of her 11 tasks not yet started.
+- **Completion:** Alex Chen has no completed tasks yet (7 in progress and 2 not started), while Julia Oberman has completed 8 of her 10.
+- **Teams:** Strategy has the largest share of tasks (32), followed by Finance (27), HR (25) and Marketing (21).
 
 ## 📊 Visualizations
 
@@ -356,6 +343,8 @@ The user mainly interacts with the task table. The calculation and reporting lay
 Task-Management-Tracker/
 │
 ├── 📊 Task_Management_Tracker.xlsx
+├── 📁 images/
+       └── dashboard.png
 └── 📄 README.md
 ```
 
@@ -376,8 +365,6 @@ Task-Management-Tracker/
    - Task Duration
    - Overdue status
 8. Review the updated KPIs and charts on the dashboard.
-
-> **Note:** The workbook is designed for Microsoft Excel. Some Excel-specific features, particularly Data Validation and structured table behavior, may not behave identically in other spreadsheet applications.
 
 ---
 
@@ -403,17 +390,11 @@ The user interacts primarily with the task table while the dashboard provides an
 
 The current version provides a solid task tracking and reporting foundation. Potential enhancements could include:
 
-- 📅 Timeline / Gantt chart for task planning
-- 📈 Completion-rate and productivity trends over time
+- 📈 Completion-rate and productivity trends
 - 🔎 Interactive filters or slicers
-- 🚦 Priority and risk indicators
-- 👤 Owner-specific workload dashboards
-- 📆 Monthly / weekly task trend analysis
+- 📆 Monthly/weekly task trend analysis
 - ⏱️ Average task duration KPI
 - 📉 Overdue-task trend tracking
-- 🔄 Power Query integration for external data sources
-- 🤖 Power Automate integration for automated notifications
-- 📊 More advanced dashboard interactivity
 
 ---
 
@@ -424,8 +405,7 @@ This project provided practical experience in building an Excel-based reporting 
 Key takeaways include:
 
 - Designing structured datasets for reporting
-- Using Excel Tables and structured references
-- Building formula-driven calculated fields
+- Building calculated fields using formulas
 - Implementing data validation for data quality
 - Separating calculation logic from dashboard presentation
 - Designing meaningful KPIs
